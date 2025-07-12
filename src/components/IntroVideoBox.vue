@@ -69,7 +69,7 @@ defineProps({
 			height: auto;
 			border-radius: 8px;
 			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-			/* margin: 1rem 0; */
+			margin: 1rem 0;
 		}
 
 			// blurbs above & below the video

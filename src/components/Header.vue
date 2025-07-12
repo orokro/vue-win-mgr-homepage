@@ -16,17 +16,16 @@
 			<!-- the entire logo will link to github cuz why not -->
 			<a 
 				class="github-link"
-				href="https://github.com/orokro/ThreeQuery"
+				href="https://github.com/orokro/Vue-Window-Manager"
 				target="_blank"
 			>
 
 				<!-- logo -->
-				<div class="logo-circle box-bg-color">
+				<div class="logo-circle">
 					<img 
 						class="logo" 
-						src="/img/logo.png"
+						src="/img/VWM_logo.png"
 						alt="Logo"
-						width="100%"
 						height="100%"
 					/>
 				</div>
@@ -34,7 +33,7 @@
 				<!-- logo text -->
 				<h1 class="logo-text box-bg-color">
 					<span>
-						ThreeQuery
+						vue-win-mgr
 					</span>
 				</h1>
 
@@ -197,8 +196,8 @@ onUnmounted(() => {
 		width: 100vw;
 
 		// dark blur background
-		background: rgba(255, 255, 255, 0.2);
-		backdrop-filter: blur(10px);
+		background: rgba(255, 255, 255, 0.6);
+		backdrop-filter: blur(15px);
 
 		border-bottom: 3px solid white;
 
@@ -213,7 +212,7 @@ onUnmounted(() => {
 
 		// common bg color
 		.box-bg-color {
-			background: rgba(255, 255, 255, 0.6);
+			background: rgba(255, 255, 255, .9);
 		}
 
 		// stack stuff left
@@ -236,8 +235,10 @@ onUnmounted(() => {
 		.logo-box {
 
 			// fixed size
-			width: 262px;
+			width: 360px;
 			height: 80px;
+
+			/* border: 1px solid red; */
 
 			// fixed on top-left
 			.logo-circle {
@@ -245,14 +246,11 @@ onUnmounted(() => {
 				// fixed on top-left
 				position: absolute;
 				bottom: 7px;
-				left: 5px;
+				left: 0px;
 				
 				// black circle
-				width: 65px;
 				height: 65px;
-				border-radius: 50% 50% 5px 50%;
 				
-				padding: 8px;
 
 				// logo image
 				.logo {
@@ -271,7 +269,7 @@ onUnmounted(() => {
 				// fixed position next to logo image
 				position: absolute;
 				bottom: 7px;
-				left: 74px;
+				left: 150px;
 				height: 40px;
 
 				// pretty corners
@@ -281,7 +279,7 @@ onUnmounted(() => {
 				padding: 0px 20px 0px 5px;
 
 				// text styles
-				color: white;
+				color: #7d50f8;
 				font-weight: bolder;
 				font-style: italic;
 
@@ -302,7 +300,7 @@ onUnmounted(() => {
 				// fixed above the logo
 				position: absolute;
 				top: 12px;
-				left: 78px;
+				left: 150px;
 				height: 22px;
 				width: 120px;
 
@@ -310,6 +308,7 @@ onUnmounted(() => {
 				padding: 0px 0px 0px 21px;
 
 				color: #EFEFEF;
+				
 
 				// the logo image
 				img {
@@ -322,6 +321,7 @@ onUnmounted(() => {
 					font-weight: inherit;
 					position: relative;
 					top: -4px;
+					color: #7d50f8
 				}
 
 				&:hover {
@@ -378,7 +378,7 @@ onUnmounted(() => {
 					cursor: pointer;
 					
 					// text styles
-					color: #0fc9cc;
+					color: #8860f7;
 					font-weight: bold;
 					transition: color 0.3s ease;
 
@@ -388,7 +388,12 @@ onUnmounted(() => {
 						font-weight: inherit;
 					}// span
 
-					&:hover, &.active {
+					&:hover {
+						color: #00ABAE;
+						font-weight: bolder;
+					}
+					
+					&.active {
 						color: white;
 						font-weight: bolder;
 					}
@@ -408,7 +413,7 @@ onUnmounted(() => {
 					width: 82.5px;
 
 					// nice teal styles
-					background: #00ABAE;
+					background: #7d50f8;
 
 					// same shape as .nav-container
 					border-radius: 40px 5px;
