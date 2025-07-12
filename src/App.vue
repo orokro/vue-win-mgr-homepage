@@ -21,41 +21,116 @@
 	<br><br>
 	<div class="overview-box">
 
+		<div align="center">
+			<img class="logo" src="/img/VWM_logo.png" alt="Vue Win Mgr Logo" width="200px"/>
+		</div>
+
 		<h2>vue-win-mgr In a Nutshell:</h2>
 		<br>
-		<p>Imagine in Blender you build a scene hierarchy:</p>
-		<br>
-		<img src="/img/blender_screen.png" width="100%"/>
-
-		<br><br>
 		<p>
-			Notice how you can add <span class="cmd">#id-names</span> and <span class="cmd">.class-names</span>
-			to objects, just by adding to their name in Blender:
-			<br>(or your application of choice*)
+			The <code>vue-win-mgr</code> library is easy to implement. It just uses regular ol' Vue components as it's windows.
+			They don't need to meet any specific requirements. You can use <em>any</em> state solution you want for your app,
+			just think of the windows as Vue components that can be moved around, docked, snapped, resized, closed, etc.
 		</p>
-		<img src="/img/blender_names.png" width="100%"/>
+		<br/>
+		<p>Just import a bunch of components to use as windows:</p>
+		<br>
+		<img src="/img/overview_00_regular_components.png" width="100%" class="code-screen" style="max-width: 778px;"/>
 
-		<br><br>
-		After you export the Blender scene as <span class="cmd">MonkeyScene.glb</span>,
-		you can then import using ThreeQuery, like so:
-		<br><br>
-		<img src="/img/load_monkeys.png" width="100%"/>
-
-		<br><br>
-		By using the <span class="cmd">.loadGeometry</span> method, all the loaded objects are scaned for the <span class="cmd">#id-names</span> and <span class="cmd">.class-names</span> provided in the Blender scene hierarchy.
-		<br><br>
-		Now you can do easy & fun stuff, with jQuery like syntax:
-		<br><br>
-		<img src="/img/code_sample.png" width="100%"/>
-		<br><br>
-		<em>*Note: in order for ThreeQuery to find the <span class="cmd">#id-names</span> and <span class="cmd">.class-names</span> in your scene, you need to add them to the name of the objects in your 3D application of choice. When you export the file, they must appear on the "userData.name" field of the imported ThreeJS model. Exporting a GLTF/GLB from Blender does this by default, other applications may or may not.</em>
-
-		<br><br>
-		<br><br>
-		<h2>ThreeQuery Tutorial:</h2>
+		<br><br><br><br>
+		<p>
+			Next, prepare the windows in an Array, by providing:
+		</p>
+		<ul>
+			<li><strong>window</strong> &mdash; the imported Vue component constructor</li>
+			<li><strong>title</strong> &mdash; a title for the window when instantiated (this can be programmatically changed as well)</li>
+			<li><strong>slug</strong> &mdash; a string we can refer to this window kind in layouts or code</li>
+			<li><strong>icon</strong> &mdash; and optional path to an image to use as the window icon</li>
+		</ul>
 		<br>
 		<p>
-			Below is a full tutorial for how to get started with Blender + ThreeQuery!
+			See the example here:
+		</p>
+		<br>
+		<img src="/img/overview_10_arrray_of_windows.png" width="100%" class="code-screen" style="max-width: 527px;"/>
+
+		<br><br><br><br>
+
+		<p>
+			If you want, you can also use the window managers built in header (top bar) and status bar system.
+			<br><br>
+			Let's bring in some components:
+		</p>
+		<br>
+		<img src="/img/overview_20_headerbar_and_statusbar_components_as_well.png" width="100%" class="code-screen" style="max-width: 487px;"/>
+
+		<br><br><br><br>
+
+		<p>
+			Now let's put it all together!
+			<br><br>
+			The snippet below is a pretty self-explanatory example of the <code>&lt;WindowManager\&gt;</code> component
+			implemented in a template.
+			<br><br>
+			You can check out the layout field in the docs below for a full breakdown (it's easy)
+		</p>
+		<br>
+		<img src="/img/overview_30_implementing_the_component.png" width="100%" class="code-screen" style="max-width: 969px;"/>
+
+		<br><br><br><br>
+
+		<p>
+			If you don't want to make components for the header and status bar, you can use named slots
+			as well, consider the example below:
+		</p>
+		<br>
+		<img src="/img/overview_40_named_slots_alternative.png" width="100%" class="code-screen" style="max-width: 726px;"/>
+
+		<br><br><br><br>
+
+		<p>
+			That's pretty much it! <br>
+			Of course, there's plenty more to discuss, but that's the gist of it.
+			<br><br>
+			You can also programmatically interact with the system via three provided contexts:
+		</p>
+		<ul>
+			<li>
+				<strong>WindowManagerContext</strong> &mdash; 
+				Allows some global settings to be changed programmatically &amp; layouts to be exported/loaded.
+			</li>
+			<li>
+				<strong>WindowFrameContext</strong> &mdash; 
+				Windows can interact with the WindowFrame they're docked in programmatically.
+			</li>
+			<li>
+				<strong>WindowContext</strong> &mdash; 
+				Allows your window components to manipulate their actual window instance, like setting title programmatically.
+			</li>
+		</ul>
+		<br>
+		<p>
+			For the window manager you can just add a ref to the component, like so
+		</p>
+		<img src="/img/overview_50_add_ref_to_mananger.png" width="100%" class="code-screen" style="max-width: 463px;"/>
+		<br>
+		<p>
+			You can then call <code>.getContext()</code> on the component reference to get the <code>WindowManagerContext</code>
+		</p>
+		<br>
+		<p>
+			For the others, you can <code>inject</code> them into your components, like so:
+		</p>
+		<img src="/img/overview_60_geting_contexts.png" width="100%" class="code-screen" style="max-width: 577px;"/>
+
+		<br><br>
+
+
+
+		<h2>vue-win-mgr Tutorial:</h2>
+		<br>
+		<p>
+			Below is a full tutorial for how to get started with with the <code>vue-win-mgr</code>!
 		</p>
 		<br>
 		<div align="center" style="min-height: 60vh;">
@@ -298,6 +373,12 @@ import IntroVideoBox from './components/IntroVideoBox.vue';
 			font-weight: bolder;
 			color: white;
 		}// .cmd
+
+		.code-screen{
+			box-sizing: content-box;
+			border-left: 3px solid #7f49a0;
+			margin-left: 30px;
+		}
 
 	}// .overview-box
 
