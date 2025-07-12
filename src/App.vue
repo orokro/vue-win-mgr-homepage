@@ -8,7 +8,12 @@
 
 	<!-- box that renders 3D objects & interactively lets you test queries -->
 	<a id="demo"/>
-	<ThreeDemo />
+	<br><br><br><br>
+	<IntroVideoBox
+		video-url="Vue-Win-Mgr-Demo.mp4"
+		top-blurb="Check out this amazing window manager demo!"
+		bottom-blurb="Let us know what you think after watching."
+	/>
 
 	<!-- overview video -->
 	<a id="overview"/>
@@ -141,9 +146,9 @@ import { ref } from 'vue';
 // components
 import Header from './components/Header.vue';
 import TheDocs from './components/TheDocs.vue';
-import ThreeDemo from './components/ThreeDemo.vue';
 import SectionHeader from './components/SectionHeader.vue';
 import MDBox from './components/MDBox.vue';
+import IntroVideoBox from './components/IntroVideoBox.vue';
 
 </script>
 
@@ -219,7 +224,7 @@ import MDBox from './components/MDBox.vue';
 
 			// tiled background image over the screen
 			background-image: url('/img/bg_tiles.png');
-			background-size: 150px;
+			background-size: 602px;
 			background-repeat: repeat;
 			background-position: center;
 
