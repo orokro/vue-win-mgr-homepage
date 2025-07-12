@@ -21,7 +21,7 @@
 	<br><br>
 	<div class="overview-box">
 
-		<h2>ThreeQuery In a Nutshell:</h2>
+		<h2>vue-win-mgr In a Nutshell:</h2>
 		<br>
 		<p>Imagine in Blender you build a scene hierarchy:</p>
 		<br>
@@ -81,31 +81,30 @@
 	
 		<br><br>
 		<h3>With NPM:</h3>	
-		<pre class="code">npm install three-query</pre>
+		<pre class="code">npm install vue-win-mgr</pre>
 		Then...
-		<pre class="code">import ThreeQuery from 'three-query';</pre>
-
+		<pre class="code">import { WindowManager, FRAME_STYLE } from 'vue-win-mgr';</pre>
+		Or get everything:
+		<pre class="code">
+import { 
+	WindowManager, 
+	FRAME_STYLE,
+	WindowManagerContext,
+	WindowFrameContext,
+	WindowContext
+} from 'vue-win-mgr';
+		</pre>
 
 		<br><br>
-		<h3>Or use a CDN:</h3>
-		<a href="https://unpkg.com/three-query@latest/dist/three-query.global.js" target="_blank">
-			<pre class="code">https://unpkg.com/three-query@latest/dist/three-query.global.js</pre>
-		</a>
-		Then...
-		<pre class="code">import ThreeQuery from 'https://unpkg.com/three-query@latest/dist/three-query.global.js';</pre>
-		Or...
-		<pre class="code">&lt;script src="https://unpkg.com/three-query@latest/dist/three-query.global.js"&gt;&lt;/script&gt;</pre>
-		
-		<br><br>
-		<h2>Check out ThreeQuery over here:</h2>
+		<h2>Check out vue-win-mgr over here:</h2>
 		<div class="row">
 
 			<div class="box">
 				<div>
 					Find it on
-					<a href="https://www.npmjs.com/package/three-query?activeTab=readme" target="_blank">NPM:</a>
+					<a href="https://www.npmjs.com/package/vue-win-mgr" target="_blank">NPM:</a>
 				</div>
-				<a href="https://www.npmjs.com/package/three-query?activeTab=readme" target="_blank">
+				<a href="https://www.npmjs.com/package/vue-win-mgr" target="_blank">
 					<img class="site-logo" src="/img/npm_logo.png" alt="NPM Logo" height="70px"/>
 				</a>
 			</div>
@@ -113,9 +112,9 @@
 			<div class="box">
 				<div>
 					Find it on
-					<a href="https://github.com/orokro/ThreeQuery" target="_blank">GitHub:</a>
+					<a href="https://github.com/orokro/Vue-Window-Manager" target="_blank">GitHub:</a>
 				</div>
-				<a href="https://github.com/orokro/ThreeQuery" target="_blank">
+				<a href="https://github.com/orokro/Vue-Window-Manager" target="_blank">
 					<img class="site-logo" src="/img/github_logo.png" alt="GitHub Logo" height="100px"/>
 				</a>
 			</div>
