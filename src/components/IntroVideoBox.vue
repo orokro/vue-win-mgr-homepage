@@ -5,8 +5,14 @@
 	Shows video & some blurbs
 -->
 <template>
+
 	<div class="intro-video-box">
-		<p class="blurb-top">{{ topBlurb }}</p>
+
+		<p class="blurb-top">
+			<div>
+				{{ topBlurb }}
+			</div>
+		</p>
 		<video
 			class="video-player"
 			:src="videoUrl"
@@ -16,16 +22,26 @@
 			playsinline
 			controls
 		></video>
-		<p class="blurb-bottom">{{ bottomBlurb }}</p>
+		<p class="blurb-bottom">
+			<div>
+				{{ bottomBlurb }}
+			</div>
+		</p>
 	</div>
-</template>
 
+</template>
 <script setup>
+
+// set up some props
 defineProps({
+
+	// URL for the looping video in our main container
 	videoUrl: {
 		type: String,
 		required: true,
 	},
+
+	// blurbs to show above & below the video
 	topBlurb: {
 		type: String,
 		default: '',
@@ -35,27 +51,45 @@ defineProps({
 		default: '',
 	},
 });
+
 </script>
-
 <style lang="scss">
-.intro-video-box {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 1rem;
-	text-align: center;
 
-	.video-player {
-		width: 100%;
-		height: auto;
-		border-radius: 8px;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-		margin: 1rem 0;
-	}
+	// main outer wrapper
+	.intro-video-box {
 
-	.blurb-top,
-	.blurb-bottom {
-		font-size: 1.1rem;
-		color: #333;
-	}
-}
+		// max size
+		max-width: 1200px;
+		margin: 0 auto;
+		text-align: center;
+
+		// video player
+		.video-player {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+			/* margin: 1rem 0; */
+		}
+
+			// blurbs above & below the video
+		.blurb-top,
+		.blurb-bottom {
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			font-size: 1.1rem;
+			color: #333;
+
+			div {
+				background: white;
+				border-radius: 100px;
+				padding: 10px 25px;
+			}
+
+		}// .blurb-top, .blurb-bottom
+
+	}// .intro-video-box
 </style>

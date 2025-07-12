@@ -32,11 +32,12 @@ import { ref, onMounted } from 'vue';
 
 		/* border: 1px solid red; */
 
-		background: rgba(0, 0, 0, 0.25);
+		background: rgba(255, 255, 255, 0.25);
+		font-size: 30px;
 		color: white;
 		text-align: center;
-
-		padding: 20px;
+		text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.5);
+		padding: 5px;
 
 		h2 {
 

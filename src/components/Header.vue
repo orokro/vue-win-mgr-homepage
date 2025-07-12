@@ -197,10 +197,10 @@ onUnmounted(() => {
 		width: 100vw;
 
 		// dark blur background
-		background: rgba(0, 0, 0, 0.2);
+		background: rgba(255, 255, 255, 0.2);
 		backdrop-filter: blur(10px);
 
-		border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+		border-bottom: 3px solid white;
 
 		// gradient background
 		.bg-horizontal-gradient {
@@ -213,7 +213,7 @@ onUnmounted(() => {
 
 		// common bg color
 		.box-bg-color {
-			background: rgba(0, 0, 0, 0.5);
+			background: rgba(255, 255, 255, 0.6);
 		}
 
 		// stack stuff left
