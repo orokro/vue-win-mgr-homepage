@@ -10,7 +10,7 @@
 	<a id="demo"/>
 	<br><br><br><br>
 	<IntroVideoBox
-		video-url="Vue-Win-Mgr-Demo.mp4"
+		video-url="Demo-Reel.mp4"
 		top-blurb="Check out this amazing window manager demo!"
 		bottom-blurb="Let us know what you think after watching."
 	/>
