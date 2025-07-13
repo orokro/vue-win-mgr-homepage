@@ -6,20 +6,20 @@
 
 ## 📚 Table of Contents
 
-- [🚀 Introduction](#-introduction)
-- [🧱 The `<WindowManager />` Component](#-the-windowmanager--component)
-- [🧩 Providing `availableWindows`](#-providing-availablewindows)
-- [🗺 Defining a Layout](#-defining-a-layout)
-- [📐 Top Bar & Status Bar](#-top-bar--status-bar)
-- [🎨 Theming System](#-theming-system)
-- [⚙️ Remaining Props](#️-remaining-props)
-- [🧠 JavaScript API: Contexts](#-javascript-api-contexts)
-  - [🔧 WindowManagerContext](#-windowmanagercontext)
-  - [🪟 WindowFrameContext](#-windowframecontext)
-  - [📦 WindowContext](#-windowcontext)
-- [📦 Saving & Restoring Layouts](#-saving--restoring-layouts)
-- [🧼 Wrap Up](#-wrap-up)
-- [🔮 Coming Soon](#-coming-soon)
+- 🚀 Introduction
+- 🧱 The `<WindowManager />` Component
+- 🧩 Providing `availableWindows`
+- 🗺 Defining a Layout
+- 📐 Top Bar & Status Bar
+- 🎨 Theming System
+- ⚙️ Remaining Props
+- 🧠 JavaScript API: Contexts
+  - 🔧 WindowManagerContext
+  - 🪟 WindowFrameContext
+  - 📦 WindowContext
+- 📦 Saving & Restoring Layouts
+- 🧼 Wrap Up
+- 🔮 Coming Soon
 
 ---
 
@@ -47,7 +47,7 @@ Inspired by tools like **Blender**, **Qt Creator**, and other professional-grade
 
 This is the heart of the system. Drop it into your Vue template, and it takes care of rendering everything according to the `availableWindows` and `layout` you give it.
 
-```vue
+```html
 <WindowManager
 	ref="windowManagerEl"
 
@@ -71,7 +71,7 @@ This is the heart of the system. Drop it into your Vue template, and it takes ca
 
 You can also use **named slots** for the top and status bars:
 
-```vue
+```html
 <WindowManager :showTopBar="true" :showStatusBar="true">
 	<template #topBar>
 		<!-- custom header content -->
@@ -180,7 +180,7 @@ You can mix plain slugs and objects with props.
 
 To show bars at the top or bottom of the WindowManager:
 
-```vue
+```html
 <WindowManager :showTopBar="true" :showStatusBar="true" />
 ```
 
@@ -207,6 +207,7 @@ theme: {
 
 ```js
 const defaultThemeColors = {
+
 	// background colors
 	systemBGColor: '#000',
 	topBarBGColor: '#31313B',
@@ -245,7 +246,7 @@ const defaultThemeColors = {
 	closeButtonCircleHover: 'rgba(255, 0, 0, 0.3)',
 	closeButtonXColor: 'rgba(0, 0, 0, 0.5)',
 	closeButtonXColorHover: 'rgba(255, 255, 255, 1)',
-};
+}
 ```
 
 
@@ -268,6 +269,7 @@ All values are **reactive and hot-swappable at runtime**.
 ---
 
 ## 🧠 JavaScript API: Contexts
+
 
 The `vue-win-mgr` system provides three JavaScript context objects you can get, to access some programmatic functionality.
 
