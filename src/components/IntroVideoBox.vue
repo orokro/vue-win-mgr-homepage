@@ -9,6 +9,7 @@
 	<div class="intro-video-box">
 
 		<p class="blurb-top">
+			<br><br><br>
 			<div>
 				{{ topBlurb }}
 			</div>
@@ -24,7 +25,10 @@
 		></video>
 		<p class="blurb-bottom">
 			<div>
-				{{ bottomBlurb }}
+				Check out the live demo here!<br>
+				<a href="https://orokro.github.io/vue-win-mgr-3d-demo/" target="_blank">
+					https://orokro.github.io/vue-win-mgr-3d-demo/
+				</a>
 			</div>
 		</p>
 	</div>
