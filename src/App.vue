@@ -11,8 +11,7 @@
 	<br><br><br><br>
 	<IntroVideoBox
 		video-url="Demo-Reel.mp4"
-		top-blurb="Check out this amazing window manager demo!"
-		bottom-blurb="Let us know what you think after watching."
+		top-blurb="Check out the demo reel below & scroll down to learn how to use vue-win-mgr!"
 	/>
 
 	<!-- overview video -->
@@ -126,7 +125,6 @@
 		<br><br>
 
 
-
 		<h2>vue-win-mgr Tutorial:</h2>
 		<br>
 		<p>
@@ -137,7 +135,7 @@
 			<iframe
 				width="100%"
 				style="width: 100%; aspect-ratio: 16/9; max-width: 1200px;"
-				src="https://www.youtube.com/embed/pdj98sUquEM?si=1bbF55CglEGD84r1"
+				src="https://www.youtube.com/embed/h8QUzUtAqDI?si=T5IAY3ZcZGBOPbHv"
 				title="YouTube video player"
 				frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
@@ -318,6 +316,9 @@ import IntroVideoBox from './components/IntroVideoBox.vue';
 		margin: 0 auto;
 		padding: 20px;
 
+		overflow-x: clip;
+		
+
 		.row {
 			display: flex;
 			justify-content: space-between;
@@ -356,6 +357,8 @@ import IntroVideoBox from './components/IntroVideoBox.vue';
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 20px;
+
+		overflow-x: clip;
 
 		// slightly bigger
 		font-size: 1.2rem;

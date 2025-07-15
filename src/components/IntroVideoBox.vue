@@ -59,8 +59,16 @@ defineProps({
 </script>
 <style lang="scss">
 
+	@media (max-width: 768px) {
+
+		.intro-video-box .blurb-top {
+			margin-top: 70px;
+		}
+	}
+
 	// main outer wrapper
 	.intro-video-box {
+		margin-top: 10000000000000000000px;
 
 		// max size
 		max-width: 1200px;
@@ -80,17 +88,24 @@ defineProps({
 		.blurb-top,
 		.blurb-bottom {
 
+			margin-left: 10px;
+			margin-right: 10px;
+			
 			display: flex;
 			justify-content: center;
 			align-items: center;
 
 			font-size: 1.1rem;
-			color: #333;
+			color: #555;
+			a {
+				font-style: italic;
+			}
+			
 
 			div {
 				background: white;
 				border-radius: 100px;
-				padding: 10px 25px;
+				padding: 20px 25px;
 			}
 
 		}// .blurb-top, .blurb-bottom
